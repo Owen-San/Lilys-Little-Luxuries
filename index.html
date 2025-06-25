@@ -1,13 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <script src="index.js"></script>
-  <title>Lilys Little Luxuries</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Lily’s Little Luxuries LLC offers elegant, creative, and earthy nail artistry with a colorful twist. Explore the gallery and book your next appointment with ease."
+    />
+    <script src="index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/626ee27be3.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <title>Lily’s Little Luxuries | Nail Art with Earthy Elegance</title>
+  </head>
+  <body>
+    <section id="landing">
+      <div class="nav__container">
+        <nav class="nav__row">
+          <div class="logo__img--wrapper">
+            <img
+              src="./assets/lily-logo.png"
+              alt="Lily’s Logo"
+              class="logo__img"
+            />
+          </div>
+          <div class="nav__links">
+            <a href="#gallery" class="nav__link">Gallery</a>
+            <a href="#cta" class="nav__link--primary">Book Now</a>
+          </div>
+          <button class="btn__menu" onclick="openMenu()">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </nav>
+        <div class="menu__backdrop">
+          <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+            <i class="fas fa-times"></i>
+          </button>
+          <ul class="menu__links">
+            <li class="menu__list">
+              <a href="#about" class="menu__link" onclick="closeMenu()"
+                >About</a
+              >
+            </li>
+            <li class="menu__list">
+              <a href="#gallery" class="menu__link" onclick="closeMenu()"
+                >Gallery</a
+              >
+            </li>
+            <li class="menu__list">
+              <a href="#faq" class="menu__link" onclick="closeMenu()">FAQ</a>
+            </li>
+            <li class="menu__list">
+              <a
+                href="#cta"
+                class="menu__link--primary"
+                onclick="closeMenu()"
+                >Book Now</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about__description">
+            <h1 class="section__header">Welcome to Lily’s Little Luxuries</h1>
+            <p class="section__para">
+              At Lily’s Little Luxuries, nail art is more than just beauty —
+              it’s expression, joy, and self-care. With a creative touch and a
+              playful color palette, Lily designs custom sets that feel as good
+              as they look. Whether you want subtle elegance or vibrant fun,
+              you’ll leave feeling luxe.
+            </p>
+            <a href="#cta"><button class="btn">Book Now</button></a>
+          </div>
+          <div class="about__img--wrapper">
+            <img
+              src="./assets/about-lily.svg"
+              class="about__img"
+              alt="About Lily"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wave-divider wave-divider-top">
+      <svg
+        viewBox="0 0 1440 120"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+      >
+        <path d="M0,0 C480,120 960,0 1440,120 L1440,0 L0,0 Z" fill="#B7998D" />
+      </svg>
+    </div>
+
+    <div class="wave-divider wave-divider-bottom">
+      <svg
+        viewBox="0 0 1440 120"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+      >
+        <path d="M0,0 C480,120 960,0 1440,120 L1440,0 L0,0 Z" fill="#B7998D" />
+      </svg>
+    </div>
+
+    <section id="gallery">
+      <div class="container">
+        <h2 class="section__header">Gallery</h2>
+        <div class="coverage__grid">
+          <div class="coverage__card">
+            <h3>Minimalist Florals</h3>
+            <p>
+              Earthy greens and delicate blooms for a grounded, feminine look.
+            </p>
+            <div class="card__img--wrapper">
+              <img
+                src="./assets/nails1.jpg"
+                alt="Floral Nails"
+                class="card__img"
+              />
+            </div>
+          </div>
+          <div class="coverage__card">
+            <h3>Color Pop</h3>
+            <p>
+              Playful brights with a sleek finish — bold, fun, and
+              unforgettable.
+            </p>
+            <div class="card__img--wrapper">
+              <img
+                src="./assets/nails2.jpg"
+                alt="Color Pop Nails"
+                class="card__img"
+              />
+            </div>
+          </div>
+          <div class="coverage__card">
+            <h3>Neutral Luxe</h3>
+            <p>Soft nudes with gold accents for a timeless, clean aesthetic.</p>
+            <div class="card__img--wrapper">
+              <img
+                src="./assets/nails3.jpg"
+                alt="Neutral Nails"
+                class="card__img"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="why">
+      <div class="container">
+        <div class="row">
+          <h2 class="section__header">Why Clients Love Lily</h2>
+          <div class="why__grid">
+            <div class="why__item">
+              <div class="why__icon-wrapper">
+                <i class="fas fa-paint-brush"></i>
+              </div>
+              <div class="why__text">
+                <h3>Artistry Meets Wellness</h3>
+                <p>
+                  Each set is designed to match your energy while maintaining
+                  nail health.
+                </p>
+              </div>
+            </div>
+            <div class="why__item">
+              <div class="why__icon-wrapper">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="why__text">
+                <h3>Thoughtful Atmosphere</h3>
+                <p>
+                  Relax in a clean, calming space designed for comfort and care.
+                </p>
+              </div>
+            </div>
+            <div class="why__item">
+              <div class="why__icon-wrapper">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <div class="why__text">
+                <h3>Eco-Friendly Products</h3>
+                <p>
+                  We choose non-toxic, cruelty-free products that are gentle and
+                  effective.
+                </p>
+              </div>
+            </div>
+            <div class="why__item">
+              <div class="why__icon-wrapper">
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="why__text">
+                <h3>5-Star Service</h3>
+                <p>
+                  Clients return again and again for the quality, care, and
+                  conversation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta">
+      <div class="cta__container">
+        <div class="cta__text">
+          <h2 class="section__header">Let’s Get You Booked</h2>
+          <p class="section__para">
+            Booking your appointment is just a click away. Lily uses a secure
+            third-party platform for easy scheduling. Tap below to view
+            availability and book your luxury nail experience.
+          </p>
+          <a href="https://book.squire.com/lilyslittleluxuries" target="_blank">
+            <button class="btn">Go to Booking</button>
+          </a>
+        </div>
+        <div class="cta__form">
+          <form
+            action="https://formsubmit.co/lilysluxuries@gmail.com"
+            method="POST"
+          >
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="5"
+              required
+            ></textarea>
+
+            <input
+              type="hidden"
+              name="_subject"
+              value="New Message from Lily’s Site"
+            />
+            <input type="hidden" name="_template" value="table" />
+            <input
+              type="hidden"
+              name="_autoresponse"
+              value="Thanks for reaching out to Lily’s Little Luxuries! She'll be in touch shortly."
+            />
+
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <h2 class="section__header">Frequently Asked Questions</h2>
+        <div class="faq__wrapper">
+          <div class="faq__item">
+            <button class="faq__question">
+              How do I book an appointment? <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq__answer">
+              <p>
+                You can book online through the booking button on this site,
+                which links to Lily’s secure Squire page.
+              </p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question">
+              Do you accept walk-ins? <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq__answer">
+              <p>
+                Lily works by appointment only to ensure a relaxed, personalized
+                experience for each client.
+              </p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question">
+              What’s your cancellation policy?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq__answer">
+              <p>
+                Please cancel or reschedule at least 24 hours in advance to
+                avoid a cancellation fee.
+              </p>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question">
+              Do you use gel or dip powder? <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq__answer">
+              <p>
+                Yes! Lily offers a variety of options including gel, soft gel
+                extensions, and dip powder depending on your style and nail
+                health.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__left">
+          <img
+            src="./assets/lily-logo.png"
+            alt="Lily’s Logo"
+            class="footer__logo"
+          />
+          <p class="footer__tagline">Earthy. Expressive. Elegant.</p>
+        </div>
+        <div class="footer__middle">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#cta">Booking</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#cta">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__right">
+          <h4>Contact</h4>
+          <p class="footer__p">Email: lilyslittleluxuries.llc@gmail.com</p>
+          <p class="footer__p">Location: Bergen County, NJ</p>
+          <p class="footer__p">Instagram: @LilysLittleLuxuries</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 Lily’s Little Luxuries LLC. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
 </html>
