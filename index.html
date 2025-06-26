@@ -54,10 +54,7 @@
               <a href="#faq" class="menu__link" onclick="closeMenu()">FAQ</a>
             </li>
             <li class="menu__list">
-              <a
-                href="#cta"
-                class="menu__link--primary"
-                onclick="closeMenu()"
+              <a href="#cta" class="menu__link--primary" onclick="closeMenu()"
                 >Book Now</a
               >
             </li>
@@ -67,25 +64,26 @@
     </section>
 
     <section id="about">
-      <div class="container">
-        <div class="row">
-          <div class="about__description">
+      <div class="container about__container">
+        <div class="about__content">
+          <div class="about__text">
             <h1 class="section__header">Welcome to Lily’s Little Luxuries</h1>
             <p class="section__para">
               At Lily’s Little Luxuries, nail art is more than just beauty —
-              it’s expression, joy, and self-care. With a creative touch and a
-              playful color palette, Lily designs custom sets that feel as good
-              as they look. Whether you want subtle elegance or vibrant fun,
-              you’ll leave feeling luxe.
+              it's expression, joy, and self-care. Lily crafts custom sets that
+              feel as beautiful as they look, tailored for every mood from soft
+              and subtle to bold and vibrant.
             </p>
             <a href="#cta"><button class="btn">Book Now</button></a>
           </div>
-          <div class="about__img--wrapper">
-            <img
-              src="./assets/about-lily.svg"
-              class="about__img"
-              alt="About Lily"
-            />
+          <div class="about__img-wrapper">
+            <div class="about__img-frame">
+              <img
+                src="./assets/about-lily.svg"
+                class="about__img"
+                alt="About Lily"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -114,45 +112,62 @@
     <section id="gallery">
       <div class="container">
         <h2 class="section__header">Gallery</h2>
-        <div class="coverage__grid">
-          <div class="coverage__card">
-            <h3>Minimalist Florals</h3>
-            <p>
-              Earthy greens and delicate blooms for a grounded, feminine look.
-            </p>
-            <div class="card__img--wrapper">
-              <img
-                src="./assets/nails1.jpg"
-                alt="Floral Nails"
-                class="card__img"
-              />
+        <div class="gallery__carousel">
+          <button class="carousel__btn left" onclick="prevSlide()">
+            &#10094;
+          </button>
+
+          <div class="carousel__track-wrapper">
+            <div class="carousel__track">
+              <div class="coverage__card">
+                <h3>Minimalist Florals</h3>
+                <p>
+                  Earthy greens and delicate blooms for a grounded, feminine
+                  look.
+                </p>
+                <div class="card__img--wrapper">
+                  <img
+                    src="./assets/nails1.jpg"
+                    alt="Floral Nails"
+                    class="card__img"
+                  />
+                </div>
+              </div>
+
+              <div class="coverage__card">
+                <h3>Color Pop</h3>
+                <p>
+                  Playful brights with a sleek finish — bold, fun, and
+                  unforgettable.
+                </p>
+                <div class="card__img--wrapper">
+                  <img
+                    src="./assets/nails2.jpg"
+                    alt="Color Pop Nails"
+                    class="card__img"
+                  />
+                </div>
+              </div>
+
+              <div class="coverage__card">
+                <h3>Neutral Luxe</h3>
+                <p>
+                  Soft nudes with gold accents for a timeless, clean aesthetic.
+                </p>
+                <div class="card__img--wrapper">
+                  <img
+                    src="./assets/nails3.jpg"
+                    alt="Neutral Nails"
+                    class="card__img"
+                  />
+                </div>
+              </div>
             </div>
           </div>
-          <div class="coverage__card">
-            <h3>Color Pop</h3>
-            <p>
-              Playful brights with a sleek finish — bold, fun, and
-              unforgettable.
-            </p>
-            <div class="card__img--wrapper">
-              <img
-                src="./assets/nails2.jpg"
-                alt="Color Pop Nails"
-                class="card__img"
-              />
-            </div>
-          </div>
-          <div class="coverage__card">
-            <h3>Neutral Luxe</h3>
-            <p>Soft nudes with gold accents for a timeless, clean aesthetic.</p>
-            <div class="card__img--wrapper">
-              <img
-                src="./assets/nails3.jpg"
-                alt="Neutral Nails"
-                class="card__img"
-              />
-            </div>
-          </div>
+
+          <button class="carousel__btn right" onclick="nextSlide()">
+            &#10095;
+          </button>
         </div>
       </div>
     </section>
@@ -326,27 +341,47 @@
             alt="Lily’s Logo"
             class="footer__logo"
           />
-          <p class="footer__tagline">Earthy. Expressive. Elegant.</p>
+          <blockquote class="footer__quote">
+            “Luxury is in each detail.”
+          </blockquote>
         </div>
+
         <div class="footer__middle">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#cta">Booking</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#cta">Contact</a></li>
-          </ul>
+          <h4>Explore</h4>
+          <div class="footer__links">
+            <a href="#">Home</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#cta">Booking</a>
+            <a href="#faq">FAQ</a>
+            <a href="#cta">Contact</a>
+          </div>
         </div>
+
         <div class="footer__right">
-          <h4>Contact</h4>
-          <p class="footer__p">Email: lilyslittleluxuries.llc@gmail.com</p>
-          <p class="footer__p">Location: Bergen County, NJ</p>
-          <p class="footer__p">Instagram: @LilysLittleLuxuries</p>
+          <h4>Let's Connect</h4>
+          <p>
+            Email:
+            <a href="mailto:lilyslittleluxuries.llc@gmail.com"
+              >lilyslittleluxuries.llc@gmail.com</a
+            >
+          </p>
+          <p>Bergen County, NJ</p>
+          <p>
+            Instagram:
+            <a
+              href="https://www.instagram.com/lilys_little_luxuries_"
+              target="_blank"
+              >@Lilys_Little_Luxuries_</a
+            >
+          </p>
         </div>
       </div>
+
       <div class="footer__bottom">
-        <p>&copy; 2025 Lily’s Little Luxuries LLC. All rights reserved.</p>
+        <p>
+          Made with <span style="color: #d4af7f">♥</span> by Lily’s Little
+          Luxuries • © 2025
+        </p>
       </div>
     </footer>
   </body>
