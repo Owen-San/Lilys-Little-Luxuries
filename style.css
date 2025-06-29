@@ -81,7 +81,6 @@ li {
 /* NAVIGATION */
 .nav__container {
   background-color: #b7998d;
-  padding: 1rem 0;
 }
 
 .nav__row {
@@ -91,7 +90,7 @@ li {
 }
 
 .logo__img {
-  height: 100px;
+  height: 124px;
 }
 
 .nav__links {
