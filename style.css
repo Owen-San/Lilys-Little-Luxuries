@@ -830,6 +830,7 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 85%;
   }
 
   .about__img {
