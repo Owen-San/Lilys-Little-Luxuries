@@ -21,11 +21,7 @@
       <div class="nav__container">
         <nav class="nav__row">
           <div class="logo__img--wrapper">
-            <img
-              src="./assets/logo.png"
-              alt="Lily’s Logo"
-              class="logo__img"
-            />
+            <img src="./assets/logo.png" alt="Lily’s Logo" class="logo__img" />
           </div>
           <div class="nav__links">
             <a href="#gallery" class="nav__link">Gallery</a>
@@ -64,26 +60,24 @@
     </section>
 
     <section id="about">
-      <div class="container about__container">
-        <div class="about__content">
-          <div class="about__text">
-            <h1 class="section__header">Welcome to Lily’s Little Luxuries</h1>
-            <p class="section__para">
-              At Lily’s Little Luxuries, nail art is more than just beauty —
-              it's expression, joy, and self-care. Lily crafts custom sets that
-              feel as beautiful as they look, tailored for every mood from soft
-              and subtle to bold and vibrant.
-            </p>
-            <a href="#cta"><button class="btn">Book Now</button></a>
-          </div>
-          <div class="about__img-wrapper">
-            <div class="about__img-frame">
-              <img
-                src="./assets/about-lily.svg"
-                class="about__img"
-                alt="About Lily"
-              />
-            </div>
+      <div class="about__container">
+        <div class="about__text">
+          <h1 class="section__header">Welcome to Lily’s Little Luxuries</h1>
+          <p class="section__para">
+            At Lily’s Little Luxuries, nail art is more than just beauty — it’s
+            expression, joy, and self-care. Lily crafts custom sets that look as
+            beautiful as they feel, tailored for every mood from soft and subtle
+            to bold and vibrant.
+          </p>
+          <button class="about__btn">Book Now</button>
+        </div>
+        <div class="about__img-wrapper">
+          <div class="about__img-frame">
+            <img
+              src="./assets/sun.jpg"
+              alt="About Lily"
+              class="about__img"
+            />
           </div>
         </div>
       </div>
@@ -110,67 +104,34 @@
     </div>
 
     <section id="gallery">
-      <div class="container">
-        <h2 class="section__header">Gallery</h2>
-        <div class="gallery__carousel">
-          <button class="carousel__btn left" onclick="prevSlide()">
-            &#10094;
-          </button>
+      <h2 class="section__header">Gallery</h2>
+      <p class="gallery__subheader">
+        A glimpse at Lily’s work — artful, colorful, unforgettable.
+      </p>
 
-          <div class="carousel__track-wrapper">
-            <div class="carousel__track">
-              <div class="coverage__card">
-                <h3>Minimalist Florals</h3>
-                <p>
-                  Earthy greens and delicate blooms for a grounded, feminine
-                  look.
-                </p>
-                <div class="card__img--wrapper">
-                  <img
-                    src="./assets/nails1.jpg"
-                    alt="Floral Nails"
-                    class="card__img"
-                  />
-                </div>
-              </div>
+      <div class="gallery__slider">
+        <button class="carousel__btn left" id="prevBtn">&#10094;</button>
 
-              <div class="coverage__card">
-                <h3>Color Pop</h3>
-                <p>
-                  Playful brights with a sleek finish — bold, fun, and
-                  unforgettable.
-                </p>
-                <div class="card__img--wrapper">
-                  <img
-                    src="./assets/nails2.jpg"
-                    alt="Color Pop Nails"
-                    class="card__img"
-                  />
-                </div>
-              </div>
-
-              <div class="coverage__card">
-                <h3>Neutral Luxe</h3>
-                <p>
-                  Soft nudes with gold accents for a timeless, clean aesthetic.
-                </p>
-                <div class="card__img--wrapper">
-                  <img
-                    src="./assets/nails3.jpg"
-                    alt="Neutral Nails"
-                    class="card__img"
-                  />
-                </div>
-              </div>
-            </div>
+        <div class="carousel__track-wrapper">
+          <div class="carousel__track">
+            <img src="./assets/img_1.jpg" alt="Nail Art 1" />
+            <img src="./assets/img_2.jpg" alt="Nail Art 2" />
+            <img src="./assets/img_3.JPEG" alt="Nail Art 3" />
+            <img src="./assets/img_4.JPEG" alt="Nail Art 4" />
+            <img src="./assets/img_5.JPEG" alt="Nail Art 5" />
+            <img src="./assets/img_6.JPEG" alt="Nail Art 6" />
+            <img src="./assets/img_7.JPEG" alt="Nail Art 7" />
+            <img src="./assets/img_8.JPEG" alt="Nail Art 8" />
+            <img src="./assets/img_9.JPEG" alt="Nail Art 9" />
+            <img src="./assets/img_10.JPEG" alt="Nail Art 10" />
           </div>
-
-          <button class="carousel__btn right" onclick="nextSlide()">
-            &#10095;
-          </button>
         </div>
+
+        <button class="carousel__btn right" id="nextBtn">&#10095;</button>
       </div>
     </section>
+
+    <hr />
 
     <section id="why">
       <div class="container">
@@ -229,14 +190,15 @@
       </div>
     </section>
 
+    <hr />
+
     <section id="cta">
       <div class="cta__container">
         <div class="cta__text">
           <h2 class="section__header">Let’s Get You Booked</h2>
           <p class="section__para">
-            Booking your appointment is just a click away. Lily uses a secure
-            third-party platform for easy scheduling. Tap below to view
-            availability and book your luxury nail experience.
+            Ready to book? Fill out the form below and Lily will get back to you
+            as soon as possible!
           </p>
           <a href="https://book.squire.com/lilyslittleluxuries" target="_blank">
             <button class="btn">Go to Booking</button>
@@ -336,11 +298,12 @@
     <footer class="footer">
       <div class="footer__container">
         <div class="footer__left">
-          <img
-            src="./assets/lily-logo.png"
-            alt="Lily’s Logo"
-            class="footer__logo"
-          />
+          <a href="#"
+            ><img
+              src="./assets/logo.png"
+              alt="Lily’s Logo"
+              class="footer__logo"
+          /></a>
           <blockquote class="footer__quote">
             “Luxury is in each detail.”
           </blockquote>

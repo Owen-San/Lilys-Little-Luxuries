@@ -27,53 +27,51 @@ function closeMenu() {
 }
 
 // CAROUSEL
-
-let currentIndex = 0;
-let autoSwipeInterval;
-let lastSwipeTime = 0;
-
 window.addEventListener("load", () => {
   const track = document.querySelector(".carousel__track");
   const slides = Array.from(track.children);
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
 
-  function updateSlidePosition() {
-    const slideWidth = slides[0].getBoundingClientRect().width;
-    track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+  let index = 0;
+
+  function getSlideWidth() {
+    return slides[0].getBoundingClientRect().width + 16;
+  }
+
+  function updatePosition() {
+    const slideWidth = getSlideWidth();
+    track.style.transform = `translateX(-${index * slideWidth}px)`;
   }
 
   function nextSlide() {
-    const now = Date.now();
-    if (now - lastSwipeTime < 1000) return; // prevent double-swipe
-    currentIndex = (currentIndex + 1) % slides.length;
-    updateSlidePosition();
-    lastSwipeTime = now;
+    const visibleSlides = getVisibleSlides();
+    index++;
+    if (index > slides.length - visibleSlides) {
+      index = 0;
+    }
+    updatePosition();
   }
 
   function prevSlide() {
-    const now = Date.now();
-    if (now - lastSwipeTime < 1000) return;
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    updateSlidePosition();
-    lastSwipeTime = now;
+    const visibleSlides = getVisibleSlides();
+    index--;
+    if (index < 0) {
+      index = slides.length - visibleSlides;
+    }
+    updatePosition();
   }
 
-  function startAutoSwipe() {
-    autoSwipeInterval = setInterval(() => {
-      nextSlide();
-    }, 5000);
+  function getVisibleSlides() {
+    if (window.innerWidth <= 480) return 1;
+    if (window.innerWidth <= 768) return 2;
+    return 3;
   }
 
-  function stopAutoSwipe() {
-    clearInterval(autoSwipeInterval);
-  }
+  nextBtn.addEventListener("click", nextSlide);
+  prevBtn.addEventListener("click", prevSlide);
 
-  track.addEventListener("mouseenter", stopAutoSwipe);
-  track.addEventListener("mouseleave", startAutoSwipe);
+  window.addEventListener("resize", updatePosition);
 
-  window.addEventListener("resize", updateSlidePosition);
-  window.nextSlide = nextSlide;
-  window.prevSlide = prevSlide;
-
-  updateSlidePosition();
-  startAutoSwipe();
+  updatePosition();
 });
